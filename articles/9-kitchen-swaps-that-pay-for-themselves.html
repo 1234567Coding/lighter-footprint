@@ -11,6 +11,8 @@
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://eco-home.pages.dev/articles/9-kitchen-swaps-that-pay-for-themselves.html">
   <link rel="stylesheet" href="../styles.css">
+  <link rel="canonical" href="https://eco-home.pages.dev/articles/9-kitchen-swaps-that-pay-for-themselves.html">
+  <meta name="twitter:card" content="summary">
 </head>
 <body class="article-page">
 
@@ -43,7 +45,7 @@
 
 <main>
   <div class="wrap-narrow">
-    <p class="breadcrumb"><a href="../index.html">← Home</a> / Room-by-Room Swaps</p>
+    <p class="breadcrumb"><a href="../index.html"><span aria-hidden="true">←</span> Home</a> / Room-by-Room Swaps</p>
 
     <article>
       <header class="article-head">
@@ -137,6 +139,9 @@
           <li><a href="27-low-waste-swaps-that-actually-save-money.html">27 Low-Waste Swaps That Actually Save Money (Room by Room) →</a></li>
           <li><a href="swedish-dishcloths-vs-paper-towels-6-month-cost-test.html">Swedish Dishcloths vs. Paper Towels: 6-Month Cost Test →</a></li>
           <li><a href="diy-all-purpose-cleaner-3-recipes.html">DIY All-Purpose Cleaner: 3 Recipes That Actually Work →</a></li>
+          <li><a href="wool-dryer-balls-vs-dryer-sheets.html">Wool Dryer Balls vs. Dryer Sheets: The Real Savings Math →</a></li>
+          <li><a href="how-to-compost-in-an-apartment.html">How to Compost in an Apartment (No Smell, No Balcony Required) →</a></li>
+          <li><a href="safety-razors-vs-cartridge-razors.html">Safety Razors vs. Cartridge Razors: A Year's Worth of Shaving, Costed Out →</a></li>
         </ul>
       </nav>
     </article>
@@ -162,7 +167,7 @@
       <div class="footer-note">
         <h3>The fine print</h3>
         <p>Some links on this site are affiliate links. If you buy through them, we may earn a commission at no extra cost to you — it's how the lights stay on.</p>
-        <p><a href="../disclosure.html" style="color:#fff; font-weight:700;">Read our full affiliate &amp; advertising disclosure →</a></p>
+        <p><a href="../disclosure.html" class="footer-note-link">Read our full affiliate &amp; advertising disclosure →</a></p>
       </div>
     </div>
     <div class="footer-bottom">
@@ -180,6 +185,19 @@
   toggle.addEventListener('click', function () {
     var open = nav.classList.toggle('open');
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function (e) {
+    if (e.target.closest('a')) {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.focus();
+    }
   });
 })();
 </script>
