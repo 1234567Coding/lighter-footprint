@@ -4,13 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- MEDIVAVINE/JOURNEY: paste ad network script here -->
-  <title>DIY All-Purpose Cleaner: 3 Recipes That Actually Work (With Cost Per Bottle) | The Lighter Footprint</title>
+  <title>DIY All-Purpose Cleaner: 3 Recipes That Actually Work | The Lighter Footprint</title>
   <meta name="description" content="Three tested DIY all-purpose cleaner recipes at $0.40–$0.80 per bottle. Head-to-head results on grease, glass, and soap scum, plus which recipe is safe for stone counters.">
-  <meta property="og:title" content="DIY All-Purpose Cleaner: 3 Recipes That Actually Work (With Cost Per Bottle)">
+  <meta property="og:title" content="DIY All-Purpose Cleaner: 3 Recipes That Actually Work">
   <meta property="og:description" content="Three formulas, three tests, real cost-per-bottle math — and a clear chart for which recipe belongs on which surface.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://eco-home.pages.dev/articles/diy-all-purpose-cleaner-3-recipes.html">
   <link rel="stylesheet" href="../styles.css">
+  <link rel="canonical" href="https://eco-home.pages.dev/articles/diy-all-purpose-cleaner-3-recipes.html">
+  <meta name="twitter:card" content="summary">
 </head>
 <body class="article-page">
 
@@ -43,7 +45,7 @@
 
 <main>
   <div class="wrap-narrow">
-    <p class="breadcrumb"><a href="../index.html">← Home</a> / Low-Waste DIY</p>
+    <p class="breadcrumb"><a href="../index.html"><span aria-hidden="true">←</span> Home</a> / Low-Waste DIY</p>
 
     <article>
       <header class="article-head">
@@ -145,6 +147,7 @@
           <li><a href="wool-dryer-balls-vs-dryer-sheets.html">Wool Dryer Balls vs. Dryer Sheets: The Real Savings Math →</a></li>
           <li><a href="how-to-compost-in-an-apartment.html">How to Compost in an Apartment (No Smell, No Balcony Required) →</a></li>
           <li><a href="safety-razors-vs-cartridge-razors.html">Safety Razors vs. Cartridge Razors: A Year's Worth of Shaving, Costed Out →</a></li>
+          <li><a href="9-kitchen-swaps-that-pay-for-themselves.html">The 9 Kitchen Swaps That Pay for Themselves in Under 3 Months →</a></li>
         </ul>
       </nav>
     </article>
@@ -170,7 +173,7 @@
       <div class="footer-note">
         <h3>The fine print</h3>
         <p>Some links on this site are affiliate links. If you buy through them, we may earn a commission at no extra cost to you — it's how the lights stay on.</p>
-        <p><a href="../disclosure.html" style="color:#fff; font-weight:700;">Read our full affiliate &amp; advertising disclosure →</a></p>
+        <p><a href="../disclosure.html" class="footer-note-link">Read our full affiliate &amp; advertising disclosure →</a></p>
       </div>
     </div>
     <div class="footer-bottom">
@@ -188,6 +191,19 @@
   toggle.addEventListener('click', function () {
     var open = nav.classList.toggle('open');
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function (e) {
+    if (e.target.closest('a')) {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.focus();
+    }
   });
 })();
 </script>
