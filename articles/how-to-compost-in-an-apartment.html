@@ -11,6 +11,8 @@
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://eco-home.pages.dev/articles/how-to-compost-in-an-apartment.html">
   <link rel="stylesheet" href="../styles.css">
+  <link rel="canonical" href="https://eco-home.pages.dev/articles/how-to-compost-in-an-apartment.html">
+  <meta name="twitter:card" content="summary">
 </head>
 <body class="article-page">
 
@@ -43,7 +45,7 @@
 
 <main>
   <div class="wrap-narrow">
-    <p class="breadcrumb"><a href="../index.html">← Home</a> / Waste-Free Systems</p>
+    <p class="breadcrumb"><a href="../index.html"><span aria-hidden="true">←</span> Home</a> / Waste-Free Systems</p>
 
     <article>
       <header class="article-head">
@@ -135,7 +137,7 @@
           <dt>What if my building doesn't allow composting?</dt>
           <dd>A sealed countertop bin with frozen scraps is no different from a trash can — it needs no permission. For worm bins, red wigglers in a sealed tote are quieter than a goldfish.</dd>
           <dt>Do I need compostable bags for my bin?</dt>
-          <dd>No — a rinse after emptying works fine. If you use them, confirm your drop-off site accepts them; many "compostable" bags only break down in commercial facilities.</dd>
+          <dd>No — a rinse after emptying works fine. If you use them, confirm your drop-off site accepts them; many "compostable" bags only break down in commercial facilities. We explain why "compostable" disposables are usually a money trap in our <a href="9-kitchen-swaps-that-pay-for-themselves.html">kitchen swaps guide</a>.</dd>
         </dl>
       </div>
 
@@ -147,6 +149,7 @@
           <li><a href="diy-all-purpose-cleaner-3-recipes.html">DIY All-Purpose Cleaner: 3 Recipes That Actually Work →</a></li>
           <li><a href="wool-dryer-balls-vs-dryer-sheets.html">Wool Dryer Balls vs. Dryer Sheets: The Real Savings Math →</a></li>
           <li><a href="safety-razors-vs-cartridge-razors.html">Safety Razors vs. Cartridge Razors: A Year's Worth of Shaving, Costed Out →</a></li>
+          <li><a href="9-kitchen-swaps-that-pay-for-themselves.html">The 9 Kitchen Swaps That Pay for Themselves in Under 3 Months →</a></li>
         </ul>
       </nav>
     </article>
@@ -172,7 +175,7 @@
       <div class="footer-note">
         <h3>The fine print</h3>
         <p>Some links on this site are affiliate links. If you buy through them, we may earn a commission at no extra cost to you — it's how the lights stay on.</p>
-        <p><a href="../disclosure.html" style="color:#fff; font-weight:700;">Read our full affiliate &amp; advertising disclosure →</a></p>
+        <p><a href="../disclosure.html" class="footer-note-link">Read our full affiliate &amp; advertising disclosure →</a></p>
       </div>
     </div>
     <div class="footer-bottom">
@@ -190,6 +193,19 @@
   toggle.addEventListener('click', function () {
     var open = nav.classList.toggle('open');
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function (e) {
+    if (e.target.closest('a')) {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.focus();
+    }
   });
 })();
 </script>
